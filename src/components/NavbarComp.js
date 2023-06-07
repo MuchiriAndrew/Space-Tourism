@@ -53,7 +53,7 @@ function NavbarComp() {
 
      {['md'].map((expand) => (
 
-<Navbar className='mynav' bg="transparent" expand={expand}>
+<Navbar className='mynav p-0' bg="transparent" expand={expand}>
 <Container id='mainCont'>  
 
 <Navbar.Brand className='ms-4' href="./" >
@@ -75,7 +75,7 @@ function NavbarComp() {
                 <Nav className='mainNav'>
                     <hr className='d-none d-xl-block'/>
             
-                <Nav.Link id={`mylinks-home-${active1}`} className='me-5 text-light' href="#" ><b>00&nbsp;&nbsp;</b>HOME</Nav.Link>
+                <Nav.Link id={`mylinks-home-${active1}`} className='me-5 text-light' href="./" ><b>00&nbsp;&nbsp;</b>HOME</Nav.Link>
                 <Nav.Link id={`mylinks-dest-${active2}`} className='me-5 text-light' href="./destination"  ><b>01&nbsp;&nbsp;</b>DESTINATION</Nav.Link>
                 <Nav.Link id={`mylinks-crew-${active3}`} className='me-5 text-light' href="./crew"  ><b>02&nbsp;&nbsp;</b>CREW</Nav.Link>
                 <Nav.Link id={`mylinks-tech-${active4}`} className='me-3 text-light' href="./technology"  ><b>03&nbsp;&nbsp;</b>TECHNOLOGY</Nav.Link>

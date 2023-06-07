@@ -1,11 +1,16 @@
 import React from 'react'
 import NavbarComp from '../NavbarComp'
+import './Home.css'
+import { Container } from 'react-bootstrap'
 
 
 
 function Home() {
   return (
-   <NavbarComp />
+    <Container className='wrapper'>
+      <NavbarComp />
+    </Container>
+   
   )
 }
 

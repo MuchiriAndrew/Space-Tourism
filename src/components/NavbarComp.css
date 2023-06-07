@@ -29,7 +29,7 @@
 }
 #mylinks-home-:hover{
     border-bottom: 4px solid lightgrey;
-    transition: 0.3s ease-in-out;
+    transition: 0.2s ease-in-out;
  }
 
  /* destination */
@@ -40,7 +40,7 @@
 }
 #mylinks-dest-:hover{
    border-bottom: 4px solid lightgrey;
-   transition: 0.3s ease-in-out;
+   transition: 0.2s ease-in-out;
 }
 #mylinks-dest-active{
     display: flex;
@@ -57,7 +57,7 @@
 }
 #mylinks-crew-:hover{
    border-bottom: 4px solid lightgrey;
-   transition: 0.3s ease-in-out;
+   transition: 0.2s ease-in-out;
 }
 #mylinks-crew-active{
     display: flex;
@@ -75,7 +75,7 @@
 }
 #mylinks-tech-:hover{
    border-bottom: 4px solid lightgrey;
-   transition: 0.3s ease-in-out;
+   transition: 0.2s ease-in-out;
 }
 #mylinks-tech-active{
     display: flex;
