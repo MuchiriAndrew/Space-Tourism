@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import {Link} from 'react-router-dom'
 import './NavbarComp.css';
 
 function NavbarComp() {
@@ -56,11 +57,11 @@ function NavbarComp() {
 <Navbar className='mynav p-0' bg="transparent" expand={expand}>
 <Container id='mainCont'>  
 
-<Navbar.Brand className='ms-4' href="./" >
+<Navbar.Brand as={Link} to="/" className='ms-4'>
   <img src="../../images/shared/logo.svg" alt="logo"  className="img-fluid"/>
 </Navbar.Brand>
 
-<img className="d-md-none" style={{ visibility: display ? "visible" : "hidden" }} onClick={handleShow} src="../../images/shared/icon-hamburger.svg" alt="" />
+<img className="d-md-none me-4" style={{ visibility: display ? "visible" : "hidden" }} onClick={handleShow} src="../../images/shared/icon-hamburger.svg" alt="" />
 
 
 <Navbar.Offcanvas show={show} onHide={handleClose} className='offcanvas' id={`offcanvasNavbar-expand-${expand}`} aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`} placement="end" >
@@ -75,10 +76,10 @@ function NavbarComp() {
                 <Nav className='mainNav'>
                     <hr className='d-none d-xl-block'/>
             
-                <Nav.Link id={`mylinks-home-${active1}`} className='me-5 text-light' href="./" ><b>00&nbsp;&nbsp;</b>HOME</Nav.Link>
-                <Nav.Link id={`mylinks-dest-${active2}`} className='me-5 text-light' href="./destination"  ><b>01&nbsp;&nbsp;</b>DESTINATION</Nav.Link>
-                <Nav.Link id={`mylinks-crew-${active3}`} className='me-5 text-light' href="./crew"  ><b>02&nbsp;&nbsp;</b>CREW</Nav.Link>
-                <Nav.Link id={`mylinks-tech-${active4}`} className='me-3 text-light' href="./technology"  ><b>03&nbsp;&nbsp;</b>TECHNOLOGY</Nav.Link>
+                <Nav.Link as={Link} to="/" id={`mylinks-home-${active1}`} className='me-md-4 me-lg-5 text-light' ><b className='d-none d-xl-block'>00&nbsp;&nbsp;</b>HOME</Nav.Link>
+                <Nav.Link  as={Link} to="/destination"  id={`mylinks-dest-${active2}`} className='me-md-4 me-lg-5 text-light'   ><b className='d-none d-xl-block'>01&nbsp;&nbsp;</b>DESTINATION</Nav.Link>
+                <Nav.Link as={Link} to="/crew"  id={`mylinks-crew-${active3}`} className='me-md-4 me-lg-5 text-light'  ><b className='d-none d-xl-block'>02&nbsp;&nbsp;</b>CREW</Nav.Link>
+                <Nav.Link  as={Link} to="/technology" id={`mylinks-tech-${active4}`} className='me-md-4 me-lg-5 text-light'   ><b className='d-none d-xl-block'>03&nbsp;&nbsp;</b>TECHNOLOGY</Nav.Link>
 
                 </Nav>
               </Offcanvas.Body>
