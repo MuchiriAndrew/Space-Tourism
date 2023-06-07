@@ -61,15 +61,13 @@ function NavbarComp() {
   <img src="../../images/shared/logo.svg" alt="logo"  className="img-fluid"/>
 </Navbar.Brand>
 
-<img className="d-md-none me-4" style={{ visibility: display ? "visible" : "hidden" }} onClick={handleShow} src="../../images/shared/icon-hamburger.svg" alt="" />
+<img className="img-fluid d-md-none me-4" style={{ visibility: display ? "visible" : "hidden" }} onClick={handleShow} src="../../images/shared/icon-hamburger.svg" alt="" />
 
 
-<Navbar.Offcanvas show={show} onHide={handleClose} className='offcanvas' id={`offcanvasNavbar-expand-${expand}`} aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`} placement="end" >
+<Navbar.Offcanvas style={{width:"70vw"}} show={show} onHide={handleClose} className='offcanvas' id={`offcanvasNavbar-expand-${expand}`} aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`} placement="end" >
 
-              <Offcanvas.Header closeButton>
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-               
-                </Offcanvas.Title>
+              <Offcanvas.Header className='justify-content-end mt-3 me-2'>
+              <img className='img-fluid' style={{ visibility: display ? "hidden" : "visible" }} onClick={handleClose} src="../../images/shared/icon-close.svg" alt="" />
               </Offcanvas.Header>
 
               <Offcanvas.Body className="justify-content-end">
