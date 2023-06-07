@@ -74,10 +74,10 @@ function NavbarComp() {
                 <Nav className='mainNav'>
                     <hr className='d-none d-xl-block'/>
             
-                <Nav.Link as={Link} to="/" id={`mylinks-home-${active1}`} className='me-md-4 me-lg-5 text-light' ><b className='d-none d-xl-block'>00&nbsp;&nbsp;</b>HOME</Nav.Link>
-                <Nav.Link  as={Link} to="/destination"  id={`mylinks-dest-${active2}`} className='me-md-4 me-lg-5 text-light'   ><b className='d-none d-xl-block'>01&nbsp;&nbsp;</b>DESTINATION</Nav.Link>
-                <Nav.Link as={Link} to="/crew"  id={`mylinks-crew-${active3}`} className='me-md-4 me-lg-5 text-light'  ><b className='d-none d-xl-block'>02&nbsp;&nbsp;</b>CREW</Nav.Link>
-                <Nav.Link  as={Link} to="/technology" id={`mylinks-tech-${active4}`} className='me-md-4 me-lg-5 text-light'   ><b className='d-none d-xl-block'>03&nbsp;&nbsp;</b>TECHNOLOGY</Nav.Link>
+                <Nav.Link as={Link} to="/" id={`mylinks-home-${active1}`} className='me-md-4 me-lg-5 text-light' ><b className='d-block d-md-none d-xl-block'>00&nbsp;&nbsp;</b>HOME</Nav.Link>
+                <Nav.Link  as={Link} to="/destination"  id={`mylinks-dest-${active2}`} className='me-md-4 me-lg-5 text-light'   ><b className='d-block d-md-none d-xl-block'>01&nbsp;&nbsp;</b>DESTINATION</Nav.Link>
+                <Nav.Link as={Link} to="/crew"  id={`mylinks-crew-${active3}`} className='me-md-4 me-lg-5 text-light'  ><b className='d-block d-md-none d-xl-block'>02&nbsp;&nbsp;</b>CREW</Nav.Link>
+                <Nav.Link  as={Link} to="/technology" id={`mylinks-tech-${active4}`} className='me-md-4 me-lg-5 text-light'   ><b className='d-block d-md-none d-xl-block'>03&nbsp;&nbsp;</b>TECHNOLOGY</Nav.Link>
 
                 </Nav>
               </Offcanvas.Body>
