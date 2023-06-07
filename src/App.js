@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './custom.scss';
+import Home from './components/pages/Home'
+
+
 function App() {
   return(
-    <>
-    <p className="text-primary">This is some random text</p>
-    <p className="text-secondary">This is some random text</p>
-    <p className="text-dark">This is some random text</p>
-
-    </>
+  <Router>
+    <Routes>
+      <Route path='/' element={<Home/>} />
+    </Routes>
+  </Router>
 
   );
 }
