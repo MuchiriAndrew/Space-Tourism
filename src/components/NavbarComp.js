@@ -1,6 +1,7 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
+import { useLocation } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -9,8 +10,14 @@ import './NavbarComp.css';
 
 function NavbarComp() {
 
+  const location = useLocation();
+
   const [show, setShow] = useState(false);
   const [display, setDisplay] = useState(true);
+  const [active1, setActive1] = useState('');
+  const [active2, setActive2] = useState('');
+  const [active3, setActive3] = useState('');
+  const [active4, setActive4] = useState('');
 
   const handleClose = () => {
     setShow(false);
@@ -21,6 +28,25 @@ function NavbarComp() {
     setShow(true);
     setDisplay(false);
   }
+
+  useEffect(()=> {
+    if (location.pathname === "/") {
+      setActive1("active");
+  }},[])
+  useEffect(()=> {
+    if (location.pathname === "/destination") {
+      setActive2("active");
+  }},[])
+  useEffect(()=> {
+    if (location.pathname === "/crew") {
+      setActive3("active");
+  }},[])
+  useEffect(()=> {
+    if (location.pathname === "/technology") {
+      setActive4("active");
+  }},[])
+
+
 
   return (
     <>
@@ -49,10 +75,10 @@ function NavbarComp() {
                 <Nav className='mainNav'>
                     <hr className='d-none d-xl-block'/>
             
-                <Nav.Link id='mylinks' className='me-5 text-light' href="./"><b>00&nbsp;&nbsp;</b>HOME</Nav.Link>
-                <Nav.Link id='mylinks' className='me-5 text-light' href="./destination"><b>01&nbsp;&nbsp;</b>DESTINATION</Nav.Link>
-                <Nav.Link id='mylinks' className='me-5 text-light' href="./crew"><b>02&nbsp;&nbsp;</b>CREW</Nav.Link>
-                <Nav.Link id='mylinks' className='me-3 text-light' href="./technology"><b>03&nbsp;&nbsp;</b>TECHNOLOGY</Nav.Link>
+                <Nav.Link id={`mylinks-home-${active1}`} className='me-5 text-light' href="#" ><b>00&nbsp;&nbsp;</b>HOME</Nav.Link>
+                <Nav.Link id={`mylinks-dest-${active2}`} className='me-5 text-light' href="./destination"  ><b>01&nbsp;&nbsp;</b>DESTINATION</Nav.Link>
+                <Nav.Link id={`mylinks-crew-${active3}`} className='me-5 text-light' href="./crew"  ><b>02&nbsp;&nbsp;</b>CREW</Nav.Link>
+                <Nav.Link id={`mylinks-tech-${active4}`} className='me-3 text-light' href="./technology"  ><b>03&nbsp;&nbsp;</b>TECHNOLOGY</Nav.Link>
 
                 </Nav>
               </Offcanvas.Body>

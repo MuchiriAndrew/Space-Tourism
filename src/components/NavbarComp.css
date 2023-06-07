@@ -15,24 +15,74 @@
     
 }
 
-#mylinks{
+/* homepage */
+#mylinks-home-{
     display: flex;
     height: 100%;
     align-items: center;
 }
-
-#mylinks:hover{
-   border-bottom: 4px solid lightgrey;
-   transition: 0.3s ease-in-out;
-}
-
-#mylinks:active{
+#mylinks-home-active{
+    display: flex;
+    height: 100%;
+    align-items: center;
     border-bottom: 4px solid white;
+}
+#mylinks-home-:hover{
+    border-bottom: 4px solid lightgrey;
     transition: 0.3s ease-in-out;
  }
 
+ /* destination */
+#mylinks-dest-{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+#mylinks-dest-:hover{
+   border-bottom: 4px solid lightgrey;
+   transition: 0.3s ease-in-out;
+}
+#mylinks-dest-active{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    border-bottom: 4px solid white;
+}
 
-   
+/* crew */
+#mylinks-crew-{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+#mylinks-crew-:hover{
+   border-bottom: 4px solid lightgrey;
+   transition: 0.3s ease-in-out;
+}
+#mylinks-crew-active{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    border-bottom: 4px solid white;
+}
+
+/* technology */
+
+#mylinks-tech-{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+#mylinks-tech-:hover{
+   border-bottom: 4px solid lightgrey;
+   transition: 0.3s ease-in-out;
+}
+#mylinks-tech-active{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    border-bottom: 4px solid white;
+}
 
 
 hr{
@@ -72,7 +122,6 @@ hr{
        height: 50vh;
        align-items: start;
        background-color: transparent;
-       justify-content: space-evenly;
     }
 
     .offcanvas {
@@ -82,4 +131,69 @@ hr{
     .fade {
     display: none;
     }
+
+    /* homepage */
+#mylinks-home-{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+#mylinks-home-active{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    border-bottom:none;
+}
+#mylinks-home-:hover{
+    border-bottom:none;
+ }
+
+ /* destination */
+#mylinks-dest-{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+#mylinks-dest-:hover{
+    border-bottom:none;
+}
+#mylinks-dest-active{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    border-bottom:none;
+}
+
+/* crew */
+#mylinks-crew-{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+#mylinks-crew-:hover{
+    border-bottom:none;
+}
+#mylinks-crew-active{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    border-bottom:none;
+}
+
+/* technology */
+
+#mylinks-tech-{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+#mylinks-tech-:hover{
+    border-bottom:none;
+}
+#mylinks-tech-active{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    border-bottom:none;
+}
 }
