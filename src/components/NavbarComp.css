@@ -1,7 +1,7 @@
 
 /* navbar for desktops: screen size extra large and above */
 .mainNav{
-    background-color:rgba(172, 168, 168, 0.3);;
+    background-color:rgba(172, 168, 168, 0.3);
     height: 80px;
     width: 55vw;
     justify-content: center;
@@ -86,10 +86,12 @@
 
 
 hr{
-    color:#000000;
-    width: 38vw;
+   
+    height: 2px ;
+    background-color:white;
+    width: 30rem;
     position: absolute;
-    right: 42rem;
+    left: -63%;
 }
 
 #mainCont {
