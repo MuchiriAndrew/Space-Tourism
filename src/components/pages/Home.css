@@ -26,7 +26,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: end;
-    background-color: blue;
+    /* background-color: blue; */
 }
 
 #txt{
@@ -78,7 +78,7 @@ letter-spacing: 3px;
     display: flex;
    justify-content: center;
     align-items: end;
-    background-color: red;
+    /* background-color: red; */
 }
 
 @media screen and (max-width: 1200px) {
