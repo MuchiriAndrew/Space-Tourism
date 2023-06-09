@@ -2,14 +2,19 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import { useLocation } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import {Link} from 'react-router-dom';
 import './NavbarComp.css';
+import { motion } from "framer-motion"
 
 function NavbarComp() {
+
+  const variants = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: "-100%" },
+  }
 
   const location = useLocation();
 
@@ -54,7 +59,10 @@ function NavbarComp() {
 
      {['md'].map((expand) => (
 
-<Navbar className='mynav p-0' bg="transparent" expand={expand}>
+<Navbar as={motion.nav} className='mynav p-0' bg="transparent" expand={expand}
+initial={{ opacity:0, y: "-50%"}}
+animate={{ opacity:1, y: "0"}}
+transition={{ duration: 1}}>
 <Container id='mainCont'>  
 
 <Navbar.Brand as={Link} to="/" className='ms-4'>
