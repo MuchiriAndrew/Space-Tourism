@@ -60,8 +60,8 @@ function NavbarComp() {
      {['md'].map((expand) => (
 
 <Navbar as={motion.nav} className='mynav p-0' bg="transparent" expand={expand}
-initial={{ opacity:0, y: "-50%"}}
-animate={{ opacity:1, y: "0"}}
+initial={{ opacity:0}}
+animate={{ opacity:1}}
 transition={{ duration: 1}}>
 <Container id='mainCont'>  
 
