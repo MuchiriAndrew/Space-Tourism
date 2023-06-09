@@ -1,7 +1,7 @@
 
 /* navbar for desktops: screen size extra large and above */
 .mainNav{
-    background-color:rgba(172, 168, 168, 0.3);
+    background-color:rgba(172, 168, 168, 0.1);
     height: 80px;
     width: 55vw;
     justify-content: center;

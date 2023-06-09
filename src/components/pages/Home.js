@@ -10,7 +10,7 @@ import {Link} from 'react-router-dom';
 
 function Home() {
   return (
-    <Container fluid className='wrapper'>
+    <Container  className='wrapper'>
       <NavbarComp />
 
       <Container fluid id='body-cont' className='mt-5 p-0' >
