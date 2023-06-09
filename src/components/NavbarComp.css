@@ -9,10 +9,8 @@
     position: relative;
     margin: 0;
     padding: 0;
-
     font-family: Barlow Condensed;
     font-size: 16px;
-    
 }
 
 /* homepage */
@@ -89,7 +87,7 @@ hr{
    
     height: 2px ;
     background-color:white;
-    width: 30rem;
+    width: 32rem;
     position: absolute;
     left: -63%;
 }
