@@ -83,8 +83,7 @@
 }
 
 
-hr{
-   
+#hr1{
     height: 2px ;
     background-color:white;
     width: 32rem;
@@ -101,7 +100,7 @@ hr{
 }
 
 .mynav {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 /* for tablets */

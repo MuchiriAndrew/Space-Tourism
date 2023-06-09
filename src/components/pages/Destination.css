@@ -9,11 +9,78 @@
     position: absolute;
 }
 
+#pick{
+    width: 100%;
+    text-align: start;
+    margin-left: 200px;
+}
+
+#planet-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+#planet-img{
+    width: 65%;
+}
+
+#details-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.details-wrapper{
+    width: 70%;
+   
+}
+
+#nav-txt{
+font-family: Barlow Condensed;
+font-size: 16px;
+letter-spacing: 1px;
+}
+
+#planet-name{
+    font-family: Bellefair;
+    font-size: 100px;
+}
+
+#planet-details{
+    font-family: Barlow Condensed;
+    font-size: 18px;
+}
+
+#myhr{
+    height: 2px ;
+    background-color:white;
+    width: 100%;
+}
+
+#subheading{
+    font-family: Barlow Condensed;
+    font-size: 14px;
+}
+
+#numbers{
+    font-family: Bellefair;
+    font-size: 28px;
+}
+
 @media screen and (max-width: 1200px) {
     .wrapper2{
         background-image: url(../../../public/images/destination/background-destination-tablet.jpg);
         background-repeat: no-repeat;
     }
+    #pick{
+        width: 100%;
+        text-align: center;
+        margin:0;
+    }
+
     }
     
     @media screen and (max-width: 768px) {
@@ -21,4 +88,10 @@
             background-image: url(../../../public/images/destination/background-destination-mobile.jpg);
             background-repeat: no-repeat;
         }
+        #pick{
+            width: 100%;
+            text-align: center;
+            margin:0;
+        }
+    
     }

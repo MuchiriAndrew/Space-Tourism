@@ -80,7 +80,7 @@ transition={{ duration: 1}}>
 
               <Offcanvas.Body className="justify-content-end">
                 <Nav className='mainNav'>
-                    <hr className='d-none d-xl-block'/>
+                    <hr id='hr1' className='d-none d-xl-block'/>
             
                 <Nav.Link as={Link} to="/" id={`mylinks-home-${active1}`} className='me-md-4 me-lg-5 text-light' ><b className='d-block d-md-none d-xl-block'>00&nbsp;&nbsp;</b>HOME</Nav.Link>
                 <Nav.Link  as={Link} to="/destination"  id={`mylinks-dest-${active2}`} className='me-md-4 me-lg-5 text-light'   ><b className='d-block d-md-none d-xl-block'>01&nbsp;&nbsp;</b>DESTINATION</Nav.Link>
