@@ -19,7 +19,7 @@ function Home() {
 
         <Col xl={6} id='txt-col' className='gx-0 text-light p-0' >
           <div id='txt'>
-            <h5 id='h5txt' className='text-primary'>SO, YOU WANT TO TRAVEL TO SPACE</h5>
+            <h5 id='h5txt' className='text-primary'>SO, YOU WANT TO TRAVEL TO</h5>
             <h1  id='h1txt'>SPACE</h1>
             <p  id='ptxt' className='text-primary' >Let's face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we'll give you a truly out of this world experience!</p>
           </div>
