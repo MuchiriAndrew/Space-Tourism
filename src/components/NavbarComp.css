@@ -122,6 +122,7 @@ hr{
        height: 34vh;
        align-items: start;
        background-color: transparent;
+       font-size: 20px;
     }
 
     .offcanvas {
