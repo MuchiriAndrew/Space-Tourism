@@ -20,7 +20,7 @@ const[distance, setDistance] = useState("384,400KM");
 
 const[time, setTime] = useState("3 DAYS");
 
-const[active1, setActive1] = useState("");
+const[active1, setActive1] = useState("active");
 const[active2, setActive2] = useState("");
 const[active3, setActive3] = useState("");
 const[active4, setActive4] = useState("");
