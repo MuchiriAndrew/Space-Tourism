@@ -38,11 +38,79 @@
    
 }
 
-#nav-txt{
+#nav-txt-moon-{
 font-family: Barlow Condensed;
 font-size: 16px;
 letter-spacing: 1px;
 }
+
+#nav-txt-moon-:hover{
+    border-bottom: 3px solid lightgrey;
+    transition: 0.2s ease-in-out;
+ }
+
+ #nav-txt-moon-active{
+    font-family: Barlow Condensed;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-bottom: 4px solid white;
+}
+
+#nav-txt-mars-{
+    font-family: Barlow Condensed;
+    font-size: 16px;
+    letter-spacing: 1px;
+    }
+    
+    #nav-txt-mars-:hover{
+        border-bottom: 3px solid lightgrey;
+        transition: 0.2s ease-in-out;
+     }
+    
+     #nav-txt-mars-active{
+        font-family: Barlow Condensed;
+        font-size: 16px;
+        letter-spacing: 1px;
+        border-bottom: 4px solid white;
+    }
+
+    #nav-txt-europa-{
+        font-family: Barlow Condensed;
+        font-size: 16px;
+        letter-spacing: 1px;
+        }
+        
+        #nav-txt-europa-:hover{
+            border-bottom: 3px solid lightgrey;
+            transition: 0.2s ease-in-out;
+         }
+        
+         #nav-txt-europa-active{
+            font-family: Barlow Condensed;
+            font-size: 16px;
+            letter-spacing: 1px;
+            border-bottom: 4px solid white;
+        }
+
+        #nav-txt-titan-{
+            font-family: Barlow Condensed;
+            font-size: 16px;
+            letter-spacing: 1px;
+            }
+            
+            #nav-txt-titan-:hover{
+                border-bottom: 3px solid lightgrey;
+                transition: 0.2s ease-in-out;
+             }
+            
+             #nav-txt-titan-active{
+                font-family: Barlow Condensed;
+                font-size: 16px;
+                letter-spacing: 1px;
+                border-bottom: 4px solid white;
+            }
+
+
 
 #planet-name{
     font-family: Bellefair;

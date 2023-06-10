@@ -10,7 +10,7 @@ import { animate, motion } from "framer-motion"
 
 function Destination() {
 
-  const[picture,setPicture] = useState("../../images/destination/image-moon.png");
+const[picture,setPicture] = useState("../../images/destination/image-moon.png");
 
 const[title, setTitle] = useState("MOON");
 
@@ -20,12 +20,21 @@ const[distance, setDistance] = useState("384,400KM");
 
 const[time, setTime] = useState("3 DAYS");
 
+const[active1, setActive1] = useState("");
+const[active2, setActive2] = useState("");
+const[active3, setActive3] = useState("");
+const[active4, setActive4] = useState("");
+
 const handleMoon = () => {
   setPicture("../../images/destination/image-moon.png");
   setTitle("MOON");
   setDetails("See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.");
   setDistance("384,400KM");
   setTime("3 DAYS");
+  setActive1("active")
+  setActive2("")
+  setActive3("")
+  setActive4("")
 }
 
 const handleMars = () => {
@@ -34,6 +43,10 @@ const handleMars = () => {
   setDetails( "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!");
   setDistance("225 MIL.KM");
   setTime("9 MONTHS");
+  setActive2("active")
+    setActive1("")
+    setActive3("")
+    setActive4("")
 }
 
 const handleEuropa = () => {
@@ -42,6 +55,10 @@ const handleEuropa = () => {
   setDetails("The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.");
   setDistance("628 MIL.KM");
   setTime("3 YEARS");
+  setActive3("active")
+  setActive2("")
+  setActive1("")
+  setActive4("")
 }
 
 
@@ -52,6 +69,10 @@ const handleTitan = () => {
   setDetails("The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.");
   setDistance("1.6 BIL.KM");
   setTime("7 YEARS");
+  setActive4("active")
+    setActive2("")
+    setActive3("")
+    setActive1("")
 }
 
   return (
@@ -79,21 +100,21 @@ const handleTitan = () => {
 
           <div className='details-wrapper mt-5'>
             {/* my tabs */}
-          <Nav defaultActiveKey="#" as="ul">
+          <Nav className='mb-4' as="ul">
       <Nav.Item as="li">
-        <Nav.Link  id='nav-txt' onClick={handleMoon}>MOON</Nav.Link>
+        <Nav.Link  id= {`nav-txt-moon-${active1}`} className='p-0 me-4' onClick={handleMoon} >MOON</Nav.Link>
       </Nav.Item>
 
       <Nav.Item as="li">
-        <Nav.Link id='nav-txt' onClick={handleMars}>MARS</Nav.Link>
+        <Nav.Link id={`nav-txt-mars-${active2}`} className='p-0 me-4'  onClick={handleMars}>MARS</Nav.Link>
       </Nav.Item>
 
       <Nav.Item as="li">
-        <Nav.Link id='nav-txt' onClick={handleEuropa}>EUROPA</Nav.Link>
+        <Nav.Link id={`nav-txt-europa-${active3}`} className='p-0 me-4'  onClick={handleEuropa}>EUROPA</Nav.Link>
       </Nav.Item>
 
       <Nav.Item as="li">
-        <Nav.Link  id='nav-txt' onClick={handleTitan}>TITAN</Nav.Link>
+        <Nav.Link  id={`nav-txt-titan-${active4}`} className='p-0 me-4' onClick={handleTitan}>TITAN</Nav.Link>
       </Nav.Item>
           </Nav>
 
