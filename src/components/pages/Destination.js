@@ -1,15 +1,59 @@
 import React from 'react'
 import NavbarComp from '../NavbarComp'
+import { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import './Destination.css'
-import { motion } from "framer-motion"
-
-
+import { animate, motion } from "framer-motion"
 
 function Destination() {
+
+  const[picture,setPicture] = useState("../../images/destination/image-moon.png");
+
+const[title, setTitle] = useState("MOON");
+
+const[details, setDetails] = useState("See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.");
+
+const[distance, setDistance] = useState("384,400KM"); 
+
+const[time, setTime] = useState("3 DAYS");
+
+const handleMoon = () => {
+  setPicture("../../images/destination/image-moon.png");
+  setTitle("MOON");
+  setDetails("See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.");
+  setDistance("384,400KM");
+  setTime("3 DAYS");
+}
+
+const handleMars = () => {
+  setPicture("../../images/destination/image-mars.png");
+  setTitle("MARS");
+  setDetails( "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!");
+  setDistance("225 MIL.KM");
+  setTime("9 MONTHS");
+}
+
+const handleEuropa = () => {
+  setPicture("../../images/destination/image-europa.png");
+  setTitle("EUROPA");
+  setDetails("The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.");
+  setDistance("628 MIL.KM");
+  setTime("3 YEARS");
+}
+
+
+
+const handleTitan = () => {
+  setPicture("../../images/destination/image-titan.png");
+  setTitle("TITAN");
+  setDetails("The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.");
+  setDistance("1.6 BIL.KM");
+  setTime("7 YEARS");
+}
+
   return (
     <Container fluid className='wrapper2 text'>
       <NavbarComp />
@@ -24,7 +68,7 @@ function Destination() {
           <h5 className='text-light'> <b className='text-muted'> 01&nbsp;&nbsp;</b> PICK YOUR DESTINATION</h5>
           </div>
           
-          <img id='planet-img' className='img-fluid' src="../../images/destination/image-moon.png" alt="" />
+          <img id='planet-img' className='img-fluid' src={picture} alt="" onChange={{transition:"0.7s"}}/>
         </Col>
 
 
@@ -37,41 +81,42 @@ function Destination() {
             {/* my tabs */}
           <Nav defaultActiveKey="#" as="ul">
       <Nav.Item as="li">
-        <Nav.Link  id='nav-txt'  href="/home">MOON</Nav.Link>
+        <Nav.Link  id='nav-txt' onClick={handleMoon}>MOON</Nav.Link>
       </Nav.Item>
 
       <Nav.Item as="li">
-        <Nav.Link id='nav-txt'  eventKey="link-1">MARS</Nav.Link>
+        <Nav.Link id='nav-txt' onClick={handleMars}>MARS</Nav.Link>
       </Nav.Item>
 
       <Nav.Item as="li">
-        <Nav.Link id='nav-txt'  eventKey="link-2">EUROPA</Nav.Link>
+        <Nav.Link id='nav-txt' onClick={handleEuropa}>EUROPA</Nav.Link>
       </Nav.Item>
 
       <Nav.Item as="li">
-        <Nav.Link  id='nav-txt' eventKey="link-2">TITAN</Nav.Link>
+        <Nav.Link  id='nav-txt' onClick={handleTitan}>TITAN</Nav.Link>
       </Nav.Item>
           </Nav>
 
           {/* text */}
-          <div >
+          <div id='mydets'>
 
-          <h1 id='planet-name' className='text-light'>MOON</h1>
-          <p  id='planet-details' className='mb-5 text-light'>See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
+          <h1 id='planet-name' className='text-light'>{title}</h1>
+          <p  id='planet-details' className='mb-5 text-light'>{details}</p>
 
           </div>
           
           {/* distances */}
           <hr id='myhr'/>
-          <Row className='text-light'>
-        <Col>
-          <p id='subheading'>AVERAGE DISTANCE</p>
-          <p id='numbers'>384,400KM</p>
 
+          <Row id='numrow' className='text-light'>
+        <Col xl={6} id='subcol1'>
+          <p id='subheading'>AVERAGE DISTANCE</p>
+          <p id='numbers'>{distance}</p>
         </Col>
-        <Col>
+
+        <Col xl={6} id='subcol2'>
           <p id='subheading'>EST. TRAVEL TIME</p>
-          <p id='numbers'>3 DAYS</p>
+          <p id='numbers'>{time}</p>
         </Col>
           </Row>
 
