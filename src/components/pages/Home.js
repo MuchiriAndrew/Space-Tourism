@@ -15,7 +15,7 @@ function Home() {
 
       <Container fluid id='body-cont' className='mt-5 p-0' >
 
-      <Row id='row'>
+      <Row id='row' className='mt-5'>
 
         <Col as={motion.div} xl={6} id='txt-col' className='gx-0 text-light p-0' 
         initial={{ opacity:0, x: "-50%"}}
@@ -32,10 +32,10 @@ function Home() {
         initial={{ opacity:0, x: "50%"}}
         animate={{ opacity:1, x: "0"}}
         transition={{ duration: 1}}>
-          <Link className='btn-link' to='/destination'>
-          <div id='circle' className='rounded-circle bg-light'>
+          <Link className='btn-link rounded-circle bg-light' to='/destination'>
+         
           <h2 className='text-dark m-0 explore-txt'>EXPLORE</h2>
-          </div>
+         
           </Link>
         </Col>
 
