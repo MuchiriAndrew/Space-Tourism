@@ -11,6 +11,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 #crew-body-cont {
@@ -27,12 +28,14 @@
 #firstcol {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 }
 
 #meet{
     font-family: Barlow Condensed;
     letter-spacing: 2px;
     text-align: start;
+    height: max-content;
 }
 
 #meetcrewh5{
@@ -62,7 +65,6 @@
 display: flex;
 justify-content: center;
 align-items: end;
-
 }
 
 #crewpicture {
@@ -186,7 +188,6 @@ align-items: end;
 
     #smallnav {
         margin-top: 50px;
-
     }
     }
     
@@ -214,6 +215,23 @@ align-items: end;
         #memdets{
             font-size: 20px;
             font-family: Barlow Condensed;
+        }
+
+        #meet{
+       text-align: center;
+        }
+
+        #meetcrewh5{
+           margin: 0;
+        }
+
+        #picture-col {
+         border-bottom: 1px solid gray;
+         width: 80%;
+        }
+
+        #main-row { 
+           justify-content: center;
         }
 
         

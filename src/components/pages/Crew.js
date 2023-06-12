@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
-import { color } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 
 
@@ -86,46 +86,50 @@ function Crew() {
 
     <Row id='main-row'>
 
-      <Col  xl={6} id='firstcol' className='p-0'>
-
-        <Row id="meet" className=''>
+        <Row gy-0 id="meet" className='order-1'>
         <h5 id="meetcrewh5" className='text-light'> <b style={{color:"gray"}}>  02&nbsp;&nbsp;</b> MEET YOUR CREW</h5>
         </Row>
-        
-        <Row id="crewmem" className=''>
-          <div id='crewmemdetails'>
 
-          <h4 id='title'>{title}</h4>
-          <h3 className="text-light" id='name'>{name}</h3>
-          <p className="text-primary" id='memdets'>{details}</p>
+        <Col gy-0 xl={6} id='firstcol' className='p-0 order-3 order-md-2'>
+          <Row  id="crewmem" >
+            <div id='crewmemdetails' >
 
-          <Nav id='smallnav' className='mb-4' as="ul">
-            <Nav.Item as="li">
-              <Nav.Link  id={`circles-link-douglas-${active1}`} onClick={handleDouglas} className='p-0 me-4 rounded-circle' >&nbsp;</Nav.Link>
-            </Nav.Item>
+            <div className='order-2 order-md-1'>
+              <h4 id='title'>{title}</h4>
+              <h3 className="text-light" id='name'>{name}</h3>
+              <p className="text-primary" id='memdets'>{details}</p>
+            </div>    
+            
+            <div className='order-1 order-md-2'>
+            <Nav id='smallnav' className='mb-4' as="ul">
+              <Nav.Item as="li">
+                <Nav.Link  id={`circles-link-douglas-${active1}`} onClick={handleDouglas} className='p-0 me-4 rounded-circle' >&nbsp;</Nav.Link>
+              </Nav.Item>
 
-            <Nav.Item as="li">
-              <Nav.Link id={`circles-link-mark-${active2}`} onClick={handleMark} className='p-0 me-4 rounded-circle' >&nbsp;</Nav.Link>
-            </Nav.Item>
+              <Nav.Item as="li">
+                <Nav.Link id={`circles-link-mark-${active2}`} onClick={handleMark} className='p-0 me-4 rounded-circle' >&nbsp;</Nav.Link>
+              </Nav.Item>
 
-            <Nav.Item as="li">
-              <Nav.Link id={`circles-link-victor-${active3}`} onClick={handleVictor} className='p-0 me-4 rounded-circle' >&nbsp;</Nav.Link>
-            </Nav.Item>
+              <Nav.Item as="li">
+                <Nav.Link id={`circles-link-victor-${active3}`} onClick={handleVictor} className='p-0 me-4 rounded-circle' >&nbsp;</Nav.Link>
+              </Nav.Item>
 
-            <Nav.Item as="li">
-              <Nav.Link id={`circles-link-ansari-${active4}`} onClick={handleAnsari} className='p-0 me-4 rounded-circle'>&nbsp;</Nav.Link>
-            </Nav.Item>
-          </Nav>
+              <Nav.Item as="li">
+                <Nav.Link id={`circles-link-ansari-${active4}`} onClick={handleAnsari} className='p-0 me-4 rounded-circle'>&nbsp;</Nav.Link>
+              </Nav.Item>
+            </Nav>
+            </div>
+            
 
-          </div>
+            </div>
+            
+          </Row>
           
-        </Row>
+        </Col>
 
-      </Col>
-
-      <Col id="picture-col"  xl={6} className=''>
-      <img id='crewpicture' className='img-fluid' src={picture} alt="" />
-      </Col>
+        <Col gy-0 id="picture-col"  xl={6} className='order-2 order-md-3'>
+        <img id='crewpicture' className='img-fluid' src={picture} alt="" />
+        </Col>
 
     </Row>
 
