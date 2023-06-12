@@ -1,12 +1,136 @@
 .wrapper3{
     max-width: none;
-    width: 100vw;
-    height: 100vh;
+    width: auto;
+    min-width: 100vw;
+    height: auto;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     background-image: url(../../../public/images/crew/background-crew-desktop.jpg); 
-    background-size: 100vw 100vh;
+    background-size: 100% 100%;
     position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+#crew-body-cont {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    flex-grow: 1;
+}
+
+#main-row { 
+    flex-grow: 1;
+}
+
+#firstcol {
+    display: flex;
+    flex-direction: column;
+}
+
+#meet{
+    font-family: Barlow Condensed;
+    letter-spacing: 2px;
+    text-align: start;
+}
+
+#meetcrewh5{
+    margin-left: 100px;
+}
+
+#crewmem {
+   display: flex;
+   flex-grow: 1;
+   justify-content: center;
+   align-items: center;
+}
+
+#crewmemdetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    margin-top: 100px;
+}
+
+#smallnav {
+    margin-top: 100px;
+}
+
+#picture-col {
+display: flex;
+justify-content: center;
+align-items: end;
+
+}
+
+#crewpicture {
+    width:50%;
+}
+
+#circles-link-douglas-{
+    width: 12px;
+    height: 12px;
+    background-color: gray;
+}
+
+#circles-link-douglas-:hover {
+    background-color: lightgrey;
+}
+
+#circles-link-douglas-active {
+    background-color: white;
+    width: 12px;
+    height: 12px;
+}
+
+#circles-link-mark-{
+    width: 12px;
+    height: 12px;
+    background-color: gray;
+}
+
+#circles-link-mark-:hover {
+    background-color: lightgrey;
+}
+
+#circles-link-mark-active {
+    background-color: white;
+    width: 12px;
+    height: 12px;
+}
+
+#circles-link-victor-{
+    width: 12px;
+    height: 12px;
+    background-color: gray;
+}
+
+#circles-link-victor-:hover {
+    background-color: lightgrey;
+}
+
+#circles-link-victor-active {
+    background-color: white;
+    width: 12px;
+    height: 12px;
+}
+
+#circles-link-ansari-{
+    width: 12px;
+    height: 12px;
+    background-color: gray;
+}
+
+#circles-link-ansari-:hover {
+    background-color: lightgrey;
+}
+
+#circles-link-ansari-active {
+    background-color: white;
+    width: 12px;
+    height: 12px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -17,7 +141,7 @@
     }
     
     @media screen and (max-width: 768px) {
-        .wrappe3{
+        .wrapper3{
             background-image: url(../../../public/images/crew/background-crew-mobile.jpg);
             background-repeat: no-repeat;
         }
