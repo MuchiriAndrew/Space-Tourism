@@ -1,6 +1,6 @@
 import React from 'react'
 import NavbarComp from '../NavbarComp'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Crew.css'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -11,6 +11,8 @@ import { motion } from 'framer-motion';
 
 
 function Crew() {
+
+ 
 
   const[picture,setPicture] = useState("../../images/crew/image-douglas-hurley.png");
 
@@ -77,6 +79,58 @@ function Crew() {
   }
 
 
+  useEffect(()=> {
+     // Start of swipe effect
+let touchstartX = 0;
+let touchendX = 0;
+
+function checkDirection() {
+  //swipe left
+  if (touchendX < touchstartX){
+    if(name === "DOUGLAS HURLEY"){
+      handleMark();
+    }
+    if(name === "MARK SHUTTLEWORTH"){
+      handleVictor();
+    }
+    if(name === "VICTOR GLOVER"){
+      handleAnsari();
+    }
+    if(name === "ANOUSHEH ANSARI"){
+      handleDouglas();
+    }
+  }
+    //swipe right
+  if (touchendX > touchstartX){
+    if(name === "DOUGLAS HURLEY"){
+      handleAnsari();
+    }
+    if(name === "MARK SHUTTLEWORTH"){
+      handleDouglas();
+    }
+    if(name === "VICTOR GLOVER"){
+      handleMark();
+    }
+    if(name === "ANOUSHEH ANSARI"){
+      handleVictor();
+    }
+  }  
+}
+
+  var bb = document.getElementById("picture-col");
+
+  
+    bb.addEventListener("touchstart", (e) => {
+      touchstartX = e.changedTouches[0].screenX;
+    });
+    
+    bb.addEventListener("touchend", (e) => {
+      touchendX = e.changedTouches[0].screenX;
+      checkDirection();
+    });
+},[name])
+
+
   return (
     <Container fluid className='wrapper3'>
     <NavbarComp />
@@ -86,11 +140,17 @@ function Crew() {
 
     <Row id='main-row'>
 
-        <Row gy-0 id="meet" className='order-1'>
+        <Row as={motion.div} gy-0 id="meet" className='order-1'
+        initial={{ opacity:0, x: "-50%"}}
+        animate={{ opacity:1, x: "0"}}
+        transition={{ duration: 1}}>
         <h5 id="meetcrewh5" className='text-light'> <b style={{color:"gray"}}>  02&nbsp;&nbsp;</b> MEET YOUR CREW</h5>
         </Row>
 
-        <Col gy-0 xl={6} id='firstcol' className='p-0 order-3 order-md-2'>
+        <Col as={motion.div} gy-0 xl={6} id='firstcol' className='p-0 order-3 order-md-2'
+        initial={{ opacity:0, x: "-50%"}}
+        animate={{ opacity:1, x: "0"}}
+        transition={{ duration: 1}}>
           <Row  id="crewmem" >
             <div id='crewmemdetails' >
 
@@ -127,8 +187,11 @@ function Crew() {
           
         </Col>
 
-        <Col gy-0 id="picture-col"  xl={6} className='order-2 order-md-3'>
-        <img id='crewpicture' className='img-fluid' src={picture} alt="" />
+        <Col as={motion.div} gy-0 id="picture-col"  xl={6} className='order-2 order-md-3'
+        initial={{ opacity:0, x: "50%"}}
+        animate={{ opacity:1, x: "0"}}
+        transition={{ duration: 1}}>
+        <img id='crewpicture' className='img-fluid' src={picture} alt="" onS />
         </Col>
 
     </Row>
