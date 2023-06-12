@@ -199,12 +199,12 @@ align-items: end;
         }
 
         #crewmemdetails {
-            width: 100%;
+            width: 90%;
             margin-top: 0; 
         }
 
         #name{
-            font-size: 36px;
+            font-size: 33px;
             font-family: Bellefair;
         }
 
