@@ -234,5 +234,9 @@ align-items: end;
            justify-content: center;
         }
 
+        #crewpicture {
+            width:80%;
+        }
+
         
     }
