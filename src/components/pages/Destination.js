@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import './Destination.css'
-import { animate, motion } from "framer-motion"
+import { motion } from "framer-motion"
 
 function Destination() {
 

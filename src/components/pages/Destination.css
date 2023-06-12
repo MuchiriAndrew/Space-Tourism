@@ -1,11 +1,12 @@
 .wrapper2{
     max-width: none;
     width: 100vw;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     background-image: url(../../../public/images/destination/background-destination-desktop.jpg); 
-    background-size: 100vw 100vh;
+    background-size: 100vw 100%;
     position: absolute;
 }
 
