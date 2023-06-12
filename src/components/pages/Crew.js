@@ -95,9 +95,9 @@ function Crew() {
         <Row id="crewmem" className=''>
           <div id='crewmemdetails'>
 
-          <h4 style={{fontFamily:"Bellefair", fontSize:"32px", color:"gray"}}>{title}</h4>
-          <h3 className="text-light" style={{fontFamily:"Bellefair", fontSize:"40px" }}>{name}</h3>
-          <p className="text-light" style={{fontFamily:"Barlow Condensed", fontSize:"18px"}}>{details}</p>
+          <h4 id='title'>{title}</h4>
+          <h3 className="text-light" id='name'>{name}</h3>
+          <p className="text-primary" id='memdets'>{details}</p>
 
           <Nav id='smallnav' className='mb-4' as="ul">
             <Nav.Item as="li">

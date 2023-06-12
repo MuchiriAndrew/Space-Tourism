@@ -69,6 +69,23 @@ align-items: end;
     width:50%;
 }
 
+#title{
+    font-size: 32px;
+    font-family: Bellefair;
+    color: gray;
+}
+
+#name{
+    font-size: 40px;
+    font-family: Bellefair;
+}
+
+#memdets{
+    font-size: 18px;
+    font-family: Barlow Condensed;
+}
+
+
 #circles-link-douglas-{
     width: 12px;
     height: 12px;
@@ -133,10 +150,43 @@ align-items: end;
     height: 12px;
 }
 
+
 @media screen and (max-width: 1200px) {
     .wrapper3{
         background-image: url(../../../public/images/crew/background-crew-tablet.jpg);
         background-repeat: no-repeat;
+        overflow: hidden;
+    }
+
+    #crewmemdetails {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+        margin-top: 100px;
+        align-items: center;
+        text-align: center; 
+    }
+
+    #title{
+        font-size: 32px;
+        font-family: Bellefair;
+        color: gray;
+    }
+    
+    #name{
+        font-size: 54px;
+        font-family: Bellefair;
+    }
+    
+    #memdets{
+        font-size: 28px;
+        font-family: Barlow Condensed;
+    }
+
+    #smallnav {
+        margin-top: 50px;
+
     }
     }
     
@@ -145,4 +195,26 @@ align-items: end;
             background-image: url(../../../public/images/crew/background-crew-mobile.jpg);
             background-repeat: no-repeat;
         }
+
+        #crewmemdetails {
+            width: 100%;
+            margin-top: 0; 
+        }
+
+        #name{
+            font-size: 36px;
+            font-family: Bellefair;
+        }
+
+        #title{
+            font-size: 26px;
+            font-family: Bellefair;
+            color: gray;
+        }
+        #memdets{
+            font-size: 20px;
+            font-family: Barlow Condensed;
+        }
+
+        
     }
