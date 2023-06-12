@@ -86,7 +86,7 @@ const handleTitan = () => {
         animate={{ opacity:1, x: "0"}}
         transition={{ duration: 1}}>
           <div className='mb-5' id='pick'>
-          <h5 className='text-light'> <b className='text-muted'> 01&nbsp;&nbsp;</b> PICK YOUR DESTINATION</h5>
+          <h5 className='text-light'> <b style={{color:"gray"}}> 01&nbsp;&nbsp;</b> PICK YOUR DESTINATION</h5>
           </div>
           
           <img id='planet-img' className='img-fluid' src={picture} alt="" onChange={{transition:"0.7s"}}/>
