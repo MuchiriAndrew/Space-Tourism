@@ -105,6 +105,7 @@ letter-spacing: 3px;
     }
 
     #body-cont{
+        margin-top: 100px;
         width: 100vw;
         height: auto;
         display: flex;

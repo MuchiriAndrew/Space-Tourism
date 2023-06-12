@@ -79,7 +79,7 @@ const handleTitan = () => {
     <Container fluid className='wrapper2 text'>
       <NavbarComp />
 
-      <Container fluid className=''>
+      <Container fluid className='mt-4'>
       <Row>
         <Col as={motion.div} xl={6} id='planet-col' className='' 
         initial={{ opacity:0, x: "-50%"}}
