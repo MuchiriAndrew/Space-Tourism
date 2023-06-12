@@ -240,5 +240,7 @@ align-items: end;
             width:80%;
         }
 
-        
+        #smallnav {
+          margin: 0;        
     }
+}
