@@ -9,6 +9,8 @@
     background-image: url(../../../public/images/home/background-home-desktop.jpg); 
     background-size: 100% 100%;
     position: absolute;
+    overflow: hidden;
+
 }
 
 
