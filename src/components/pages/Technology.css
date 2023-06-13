@@ -32,7 +32,7 @@
     font-size: 24px;
     font-family: Bellefair;
     color: white;
-    margin-right: 3rem;
+    margin-right: 2rem;
     margin-bottom: 1.5rem;
 }
 
@@ -51,7 +51,7 @@
     align-items: center;
     font-size: 24px;
     font-family: Bellefair;
-    margin-right: 3rem;
+    margin-right: 2rem;
     margin-bottom: 1.5rem;
 }
 
@@ -65,7 +65,7 @@
     font-size: 24px;
     font-family: Bellefair;
     color: white;
-    margin-right: 3rem;
+    margin-right: 2rem;
     margin-bottom: 1.5rem;
 }
 
@@ -84,7 +84,7 @@
     align-items: center;
     font-size: 24px;
     font-family: Bellefair;
-    margin-right: 3rem;
+    margin-right: 2rem;
     margin-bottom: 1.5rem;
 }
 
@@ -98,7 +98,7 @@
     font-size: 24px;
     font-family: Bellefair;
     color: white;
-    margin-right: 3rem;
+    margin-right: 2rem;
     margin-bottom: 1.5rem;
 }
 
@@ -117,7 +117,7 @@
     align-items: center;
     font-size: 24px;
     font-family: Bellefair;
-    margin-right: 3rem;
+    margin-right: 2rem;
     margin-bottom: 1.5rem;
 }
 
@@ -215,10 +215,7 @@
         font-family: Barlow Condensed;
     }
 
-    #nav1{   
-        margin-right: 30px;
-        margin-bottom: 1.5rem;
-    }
+
     }
     
     @media screen and (max-width: 768px) {
