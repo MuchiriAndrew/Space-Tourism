@@ -1,6 +1,6 @@
 import React from 'react'
 import NavbarComp from '../NavbarComp'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -74,6 +74,59 @@ const handleTitan = () => {
     setActive3("")
     setActive1("")
 }
+
+useEffect(()=> {
+  // Start of swipe effect
+let touchstartX = 0;
+let touchendX = 0;
+
+function checkDirection() {
+//swipe left
+if (touchendX < touchstartX){
+ if(title === "MOON"){
+   handleMars();
+ }
+ if(title === "MARS"){
+   handleEuropa();
+ }
+ if(title === "EUROPA"){
+   handleTitan();
+ }
+ if(title === "TITAN"){
+  handleMoon();
+}
+
+}
+ //swipe right
+if (touchendX > touchstartX){
+  if(title === "MOON"){
+    handleTitan();
+  }
+  if(title === "MARS"){
+    handleMoon();
+  }
+  if(title === "EUROPA"){
+    handleMars();
+  }
+  if(title === "TITAN"){
+   handleEuropa();
+ }
+}  
+}
+
+var bb = document.getElementById("planet-img");
+
+
+ bb.addEventListener("touchstart", (e) => {
+   touchstartX = e.changedTouches[0].screenX;
+ });
+ 
+ bb.addEventListener("touchend", (e) => {
+   touchendX = e.changedTouches[0].screenX;
+   checkDirection();
+ });
+},[title])
+ 
 
   return (
     <Container fluid className='wrapper2 text'>

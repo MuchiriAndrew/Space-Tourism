@@ -9,13 +9,13 @@ import Nav from 'react-bootstrap/Nav';
 import { motion } from 'framer-motion';
 
 
-
 function Technology() {
 
   const[picture,setPicture] = useState(window.innerWidth < 1200 ? "../../images/technology/image-launch-vehicle-landscape.jpg" : "../../images/technology/image-launch-vehicle-portrait.jpg");
 
   const { width } = useWindowSize();
 
+  //for pictures when the screen resizes
   useEffect(()=>{
     if (name=== "LAUNCH VEHICLE"){
       if(width <= 1200) {
@@ -50,11 +50,9 @@ function Technology() {
   
   const[details, setDetails] = useState("A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!");
 
-
   const[active1, setActive1] = useState("active");
   const[active2, setActive2] = useState("");
   const[active3, setActive3] = useState("");
-
 
 
 const handleVehicle = () => {
@@ -66,9 +64,8 @@ const handleVehicle = () => {
   setName("LAUNCH VEHICLE");
   setDetails("A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!");
   setActive1("active")
-    setActive2("")
-    setActive3("")
-   
+  setActive2("")
+  setActive3("")
 }
 
 const handlePort = () => {
@@ -80,9 +77,8 @@ const handlePort = () => {
   setName("SPACEPORT");
   setDetails("A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch.");
   setActive1("")
-    setActive2("active")
-    setActive3("")
-    
+  setActive2("active")
+  setActive3("") 
 }
 
 const handleCapsule = () => {
@@ -95,11 +91,54 @@ const handleCapsule = () => {
   setDetails("A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.");
   setActive1("")
   setActive2("")
-    setActive3("active")
-    
+  setActive3("active")  
 }
 
-  
+useEffect(()=> {
+  // Start of swipe effect
+let touchstartX = 0;
+let touchendX = 0;
+
+function checkDirection() {
+//swipe left
+if (touchendX < touchstartX){
+ if(name === "LAUNCH VEHICLE"){
+   handlePort();
+ }
+ if(name === "SPACEPORT"){
+   handleCapsule();
+ }
+ if(name === "SPACE CAPSULE"){
+   handleVehicle();
+ }
+}
+ //swipe right
+if (touchendX > touchstartX){
+  if(name === "LAUNCH VEHICLE"){
+    handleCapsule();
+  }
+  if(name === "SPACEPORT"){
+    handleVehicle();
+  }
+  if(name === "SPACE CAPSULE"){
+    handlePort();
+  }
+}  
+}
+
+var bb = document.getElementById("picture");
+
+
+ bb.addEventListener("touchstart", (e) => {
+   touchstartX = e.changedTouches[0].screenX;
+ });
+ 
+ bb.addEventListener("touchend", (e) => {
+   touchendX = e.changedTouches[0].screenX;
+   checkDirection();
+ });
+},[name])
+ 
 
 
 
