@@ -1,4 +1,3 @@
-
 .wrapper4{
     max-width: none;
     width: auto;
@@ -23,7 +22,7 @@
     justify-content: center;
 }
 
-#nav1{
+#nav1-vehicle-{
     width: 60px;
     height: 60px;
     border: 1px solid grey;
@@ -33,13 +32,93 @@
     font-size: 24px;
     font-family: Bellefair;
     color: white;
-
     margin-right: 3rem;
     margin-bottom: 1.5rem;
 }
 
-#nav1:hover{
+#nav1-vehicle-:hover{
    border: 2px solid white;
+}
+
+#nav1-vehicle-active {
+    background-color: white;
+    color: rgb(0, 0, 29);
+    width: 60px;
+    height: 60px;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: Bellefair;
+    margin-right: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+#nav1-port-{
+    width: 60px;
+    height: 60px;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: Bellefair;
+    color: white;
+    margin-right: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+#nav1-port-:hover{
+   border: 2px solid white;
+}
+
+#nav1-port-active {
+    background-color: white;
+    color: rgb(0, 0, 29);
+    width: 60px;
+    height: 60px;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: Bellefair;
+    margin-right: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+#nav1-capsule-{
+    width: 60px;
+    height: 60px;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: Bellefair;
+    color: white;
+    margin-right: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+#nav1-capsule-:hover{
+   border: 2px solid white;
+}
+
+#nav1-capsule-active {
+    background-color: white;
+    color: rgb(0, 0, 29);
+    width: 60px;
+    height: 60px;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: Bellefair;
+    margin-right: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 #launchdetails{
