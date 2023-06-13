@@ -1,8 +1,8 @@
-## Sunnyside landing page
+## Space Tourism Website
 
-A landing page made using React and Bootstrap
+A website made using React, Bootstrap and Framer Motion
 
-Hosted the page on Render: https://space-tourism-lxuk.onrender.com/
+Hosted the site on Render: https://space-tourism-lxuk.onrender.com/
 
 ## Design Preview
 
